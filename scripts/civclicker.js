@@ -2409,6 +2409,7 @@ function doClerics() {
 		* curCiv.morale.efficiency 
 		* getWonderBonus(civData.piety)
 	);
+	pietyEarned = pietyEarned * 10;
 	civData.piety.net += pietyEarned;
 	civData.piety.owned += pietyEarned;
 }
