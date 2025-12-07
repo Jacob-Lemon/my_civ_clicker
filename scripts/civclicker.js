@@ -2801,7 +2801,7 @@ function doLabourers() {
 		});
 
 		//increase progress
-		curCiv.curWonder.progress += prod / (1000 * getWonderCostMultiplier());
+		curCiv.curWonder.progress += prod / (1 * getWonderCostMultiplier());
 	}
 }
 
