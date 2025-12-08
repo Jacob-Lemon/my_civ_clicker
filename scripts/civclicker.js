@@ -803,11 +803,11 @@ function increment (objId) {
 		} 
 	}); // Nationalism adds military units.
 
-	purchaseObj.owned += purchaseObj.increment 
+	purchaseObj.owned += (purchaseObj.increment 
 	  + (purchaseObj.increment * 9 * (civData.civilservice.owned)) 
 	  + (purchaseObj.increment * 40 * (civData.feudalism.owned)) 
 	  + ((civData.serfs.owned) * Math.floor(Math.log(civData.unemployed.owned * 10 + 1))) 
-	  + ((civData.nationalism.owned) * Math.floor(Math.log(numArmy * 10 + 1)));
+	  + ((civData.nationalism.owned) * Math.floor(Math.log(numArmy * 10 + 1))) * 100); // clicks are now 100x powerful
 
 	//Handles random collection of special resources.
 	var specialChance = purchaseObj.specialChance;
